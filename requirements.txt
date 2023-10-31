@@ -1,0 +1,18 @@
+base58==2.1.1
+bcrypt==4.0.1
+certifi==2023.7.22
+email-validator==2.1.0.post1
+Flask==2.3.3
+Jinja2==3.1.2
+requests==2.31.0
+waitress==2.1.2
+entrypoints==0.4
+eth-abi ==.2.1
+eth-account==.10.0
+eth-hash ==.5.2
+eth-keyfile==.6.1
+eth-keys ==.4.0
+eth-rlp ==.3.0
+eth-typing  ==.5.1
+eth-utils ==.3.0
+web3 == 6.11.2

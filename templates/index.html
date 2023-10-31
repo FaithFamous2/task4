@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <title>Hello World Contract Interaction</title>
+  </head>
+  <body>
+    <h1>Hello World Contract Interaction</h1>
+    <button id="get_message">Get Message</button>
+    <p id="message"></p>
+
+    <script>
+      const getMessageButton = document.getElementById("get_message");
+      const messageElement = document.getElementById("message");
+
+      getMessageButton.addEventListener("click", async () => {
+        const response = await fetch("/get_message");
+        const data = await response.json();
+
+        if (data.message) {
+          messageElement.innerHTML = data.message;
+        } else {
+          messageElement.innerHTML = "Error fetching message.";
+        }
+      });
+    </script>
+  </body>
+</html>
